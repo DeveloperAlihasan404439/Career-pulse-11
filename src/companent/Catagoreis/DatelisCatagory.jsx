@@ -3,7 +3,7 @@ import BannerShared from "../../shared/BannerShared/BannerShared";
 import { useContext } from "react";
 import { AuthContext } from "../../page/Authentication/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
-
+import axios from 'axios'
 const DatelisCatagory = () => {
   const { user } = useContext(AuthContext);
   const singleData = useLoaderData();
@@ -19,14 +19,18 @@ const DatelisCatagory = () => {
     category,
   } = singleData || {};
   const hendelBidOnTheProject = () =>{
-    Swal.fire({
+    axios.post('http://localhost:5000/myBids')
+    .then(res =>{
+      console.log(res.data)
+    })
+    /* Swal.fire({
       position: "top-center",
       icon: "success",
       title: "Successfull in the login",
       showConfirmButton: false,
       timer: 1500,
     });
-    navigate("/myBids")
+    navigate("/myBids") */
 
   }
   return (
