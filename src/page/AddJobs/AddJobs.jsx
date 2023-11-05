@@ -1,10 +1,17 @@
 import Lottie from "lottie-react";
 import addjob from "./job.json";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../Authentication/AuthProvider/AuthProvider";
 const AddJobs = () => {
     const [selectedTypeValue,setSelectedTypeValue] = useState('')
     const [selectedCategoryValue,setSelectedCategoryValue] = useState('')
-  const hendelAddJob = (e) => {
+    const { user } = useContext(AuthContext);
+    const navigate = useNavigate()
+    const currentDate = new Date().toISOString().split('T')[0];
+    const hendelAddJob = (e) => {
     e.preventDefault();
     const target = e.target;
     const email = target.email.value;
@@ -23,6 +30,18 @@ const AddJobs = () => {
         minimum_price: minimumPrice,
         maximum_price: maximumPrice,
     }
+    axios.post("http://localhost:5000/catagory", addJobData).then((res) => {
+      if (res.data.insertedId) {
+        Swal.fire({
+          position: "top-center",
+          icon: "success",
+          title: "Successfull in the new job added",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        navigate("/myPostedJobs");
+      }
+    });
     console.log(addJobData)
 };
   return (
@@ -42,9 +61,10 @@ const AddJobs = () => {
                   <input
                     type="email"
                     name="email"
+                    defaultValue={user.email}
                     className="input input-bordered"
                     placeholder="email of the employer"
-                    required
+                    readOnly
                   />
                 </div>
                 <div className="form-control w-full">
@@ -68,9 +88,10 @@ const AddJobs = () => {
                   <input
                     type="date"
                     name="deadline"
+                    defaultValue={currentDate}
                     className="input input-bordered"
                     placeholder="deadline"
-                    required
+                    readOnly
                   />
                 </div>
                 <div className="form-control w-full">

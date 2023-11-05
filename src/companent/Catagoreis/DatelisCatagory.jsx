@@ -40,13 +40,12 @@ const DatelisCatagory = () => {
       }
     });
   };
-  console.log(singleData)
   return (
     <div className="bg-base-200">
-      <BannerShared url={them_url} title={job_title} catagory={category} />
+      <BannerShared url={them_url?them_url:'https://i.ibb.co/1q5kjTT/Web-Development-Manager.png'} title={job_title} catagory={category} />
       <div className="w-11/12 mx-auto p-5 grid grid-cols-1 md:grid-cols-2 gap-5 ">
         <div>
-          <img src={them_url} alt="" className="rounded-md" />
+          <img src={them_url} alt="" className="rounded-md h-full" />
         </div>
         <div>
           <div className="card flex-shrink-0 w-full max-w-lg shadow-xl bg-base-100">

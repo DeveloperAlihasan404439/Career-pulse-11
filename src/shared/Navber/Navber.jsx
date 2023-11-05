@@ -14,7 +14,7 @@ const Navber = () => {
       <NavLink to='/addjobs' className="mb-1 lg:mb-0">Add job</NavLink>
       {user ? (
         <>
-          <NavLink className="mb-1 lg:mb-0">My posted jobs</NavLink>
+          <NavLink to ="myPostedJobs" className="mb-1 lg:mb-0">My posted jobs</NavLink>
           <NavLink to="/myBids" className="mb-1 lg:mb-0">My Bids</NavLink>
           <NavLink className="mb-1 lg:mb-0">Bid Requests</NavLink>
         </>

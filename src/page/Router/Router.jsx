@@ -6,6 +6,7 @@ import SingUp from "../Authentication/SingUp/SingUp";
 import DatelisCatagory from "../../companent/Catagoreis/DatelisCatagory";
 import MyBids from "../MyBids/MyBids";
 import AddJobs from "../AddJobs/AddJobs";
+import MyPostedJobs from "../MyPostedJobs/MyPostedJobs";
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
             {
                 path: '/addjobs',
                 element: <AddJobs/>
+            },
+            {
+                path: '/myPostedJobs',
+                element: <MyPostedJobs/>
             },
             {
                 path: '/myBids',
