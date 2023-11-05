@@ -9,7 +9,6 @@ const LogIn = () => {
   const [error, setError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
-  console.log(googleUser);
   const hendelSingUp = (e) => {
     e.preventDefault();
     const target = e.target;

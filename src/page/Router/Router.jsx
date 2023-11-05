@@ -5,6 +5,7 @@ import LogIn from "../Authentication/LogIn/LogIn";
 import SingUp from "../Authentication/SingUp/SingUp";
 import DatelisCatagory from "../../companent/Catagoreis/DatelisCatagory";
 import MyBids from "../MyBids/MyBids";
+import AddJobs from "../AddJobs/AddJobs";
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
                 element: <DatelisCatagory/>,
                 loader: ({params})=>fetch(`http://localhost:5000/catagorys/${params.id}`)
 
+            },
+            {
+                path: '/addjobs',
+                element: <AddJobs/>
             },
             {
                 path: '/myBids',

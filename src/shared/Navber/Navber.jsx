@@ -11,7 +11,7 @@ const Navber = () => {
       <NavLink to="/" className="mb-1 lg:mb-0">
         Home
       </NavLink>
-      <NavLink className="mb-1 lg:mb-0">Add job</NavLink>
+      <NavLink to='/addjobs' className="mb-1 lg:mb-0">Add job</NavLink>
       {user ? (
         <>
           <NavLink className="mb-1 lg:mb-0">My posted jobs</NavLink>
@@ -96,7 +96,7 @@ const Navber = () => {
                   onClick={logOut}
                   className="mb-1 lg:mb-0 bg-[#142F5C] px-4 text-2xl py-1 rounded-lg text-white"
                 >
-                  login
+                  Log Out
                 </NavLink>
               </div>
             ) : (
