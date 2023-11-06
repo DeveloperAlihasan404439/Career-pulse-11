@@ -4,7 +4,7 @@ const BannerShared = ({ url, title, catagory }) => {
   return (
     <div>
       <div
-        className="h-[70vh] "
+        className="h-[60vh] "
         style={{
           backgroundImage: `url(${url})`,
           backgroundRepeat: "no-repeat",
@@ -35,7 +35,7 @@ const BannerShared = ({ url, title, catagory }) => {
                 cursor={true}
                 repeat={Infinity}
                 style={{
-                  fontSize: "2em",
+                  fontSize: "20px",
                   display: "inline-block",
                   color: "white",
                 }}
