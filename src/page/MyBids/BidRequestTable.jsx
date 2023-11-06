@@ -4,8 +4,21 @@ import Swal from "sweetalert2";
 const BidRequestTable = ({ mybid, index, refetch }) => {
     console.log(mybid);
   const { _id, job_title, user_email, deadline, price,status } = mybid;
-  const hendelAccept = (_id) => {
-    console.log("Accept", _id);
+  const hendelAccept = (id) => {
+  axios
+    .patch(`http://localhost:5000/myBids/accept?id=${id}`, mybid)
+    .then((res) => {
+      if (res.data.modifiedCount) {
+        Swal.fire({
+          title: "Are you sure?",
+          text: "Bid job requst  has be accept",
+          icon: "success",
+          background: "black",
+          color: "white",
+        });
+        refetch()
+      }
+    });
   };
   const hendelReject = (id) => {
     axios
