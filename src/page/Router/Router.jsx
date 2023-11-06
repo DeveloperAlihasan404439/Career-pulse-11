@@ -8,10 +8,13 @@ import MyBids from "../MyBids/MyBids";
 import AddJobs from "../AddJobs/AddJobs";
 import MyPostedJobs from "../MyPostedJobs/MyPostedJobs";
 import Updated from "../MyPostedJobs/Update/Updated";
+import RoutError from "../RoutError/RoutError";
+import BidRequest from "../MyBids/BidRequest";
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout/>,
+        errorElement:<RoutError/>,
         children: [
             {
                 path: '/',
@@ -39,6 +42,10 @@ export const router = createBrowserRouter([
             {
                 path: '/myBids',
                 element: <MyBids/>
+            },
+            {
+                path: '/bidRequest',
+                element: <BidRequest/>
             },
             {
                 path: '/login',

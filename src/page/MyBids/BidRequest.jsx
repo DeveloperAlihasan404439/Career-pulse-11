@@ -1,10 +1,11 @@
-import BannerShared from "../../shared/BannerShared/BannerShared";
-import useMyBids from "../../shared/Hooks/useMyBids";
-import Loding from "../../shared/Loding/Loding";
+import Loding from '../../shared/Loding/Loding';
+import BannerShared from '../../shared/BannerShared/BannerShared';
+import useMyBids from '../../shared/Hooks/useMyBids';
 
-const MyBids = () => {
-  const {data, isLoading, refetch} = useMyBids()
-  console.log("MyBids", data);
+const BidRequest = () => {
+    const {data, isLoading, refetch} = useMyBids()
+    console.log("BidRequest", data);
+
   return (
     <div>
       <BannerShared
@@ -61,4 +62,4 @@ const MyBids = () => {
   );
 };
 
-export default MyBids;
+export default BidRequest;

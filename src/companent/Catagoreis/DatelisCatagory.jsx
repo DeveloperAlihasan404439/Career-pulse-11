@@ -21,10 +21,12 @@ const DatelisCatagory = () => {
     e.preventDefault();
     const myBids = {
       _id,
+      wner_email: email,
       price: maximum_price,
       deadline,
-      buyerEmail: email,
-      user: user.email
+      job_title,
+      status:"Pending",
+      user_email: user.email
 
     }
     axios.post("http://localhost:5000/myBids", myBids).then((res) => {
@@ -42,12 +44,11 @@ const DatelisCatagory = () => {
   };
   return (
     <div className="bg-base-200">
-      <BannerShared url={them_url?them_url:'https://i.ibb.co/1q5kjTT/Web-Development-Manager.png'} title={job_title} catagory={category} />
+      <BannerShared url={them_url?them_url:'https://i.ibb.co/1q5kjTT/Web-Development-Manager.png'} title={job_title} catagory={`${category}/Bids Job`} />
       <div className="w-11/12 mx-auto p-5 grid grid-cols-1 md:grid-cols-2 gap-5 ">
         <div>
-          <img src={them_url} alt="" className="rounded-md h-full" />
+          <img src='https://img.freepik.com/free-vector/business-support-concept-illustration_114360-9863.jpg?size=626&ext=jpg&ga=GA1.1.1505135152.1696615291&semt=sph' alt="" className="rounded-md max-h-fit" />
         </div>
-        <div>
           <div className="card flex-shrink-0 w-full max-w-lg shadow-xl bg-base-100">
             <form className="card-body">
               <div className="form-control">
@@ -107,7 +108,6 @@ const DatelisCatagory = () => {
               </div>
             </form>
           </div>
-        </div>
         <div />
       </div>
     </div>

@@ -13,7 +13,7 @@ const CatagoryCart = ({ catagory }) => {
         <h1 className="text-sm md:text-md text-left font-medium text-black  mb-10">Description : {description}</h1>
         <div className='absolute left-0 bottom-0 text-center py-2 bg-[#142F5C] text-white text-2xl font-medium  w-full rounded-b-xl'>
          <Link to={`/details/${_id}`}>
-         <button className='uppercase'>Bid Now</button>
+         <button className='uppercase w-full'>Bid Now</button>
          </Link>
         </div>
     </div>
