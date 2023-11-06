@@ -4,7 +4,6 @@ import Loding from "../../shared/Loding/Loding";
 
 const MyBids = () => {
   const {data, isLoading, refetch} = useMyBids()
-  console.log("MyBids", data);
   return (
     <div>
       <BannerShared
