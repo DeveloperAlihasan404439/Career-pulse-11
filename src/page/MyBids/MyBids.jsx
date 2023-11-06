@@ -21,11 +21,10 @@ const MyBids = () => {
               <th>Job Title</th>
               <th>Email</th>
               <th>Deadline</th>
+              <th>status</th>
               <th>
-                <div className="flex justify-around">
-                    <h1>Status</h1>
-                    <h1 className="mr-4">Complete</h1>
-                </div>
+              Complete
+                    {/* <h1 className="mr-4">Complete</h1> */}
               </th>
             </tr>
           </thead>
@@ -39,15 +38,11 @@ const MyBids = () => {
                   <td>{mybid?.job_title || "no title"}</td>
                   <td>{mybid.user_email}</td>
                   <td>{mybid.deadline}</td>
+                  <td>{mybid.status}</td>
                 <th>
-                  <div className="flex justify-around">
-                      <button className="px-3 bg-[#142F5C] text-white py-1 h-full rounded-lg">
-                      {mybid.status}
-                      </button>
                       <button className="px-3 bg-[#142F5C] text-white py-1 h-full rounded-lg">
                       Complete
                       </button>
-                  </div>
                 </th>
                 </tr>
               ))}
