@@ -1,5 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 const MyPostedJobsCart = ({ myjob, refetch }) => {
   const {
     _id,
@@ -10,44 +11,39 @@ const MyPostedJobsCart = ({ myjob, refetch }) => {
     email,
     description,
   } = myjob || {};
+  console.log(myjob)
   const hendelDelete = (id) => {
-    axios
-      .delete(`http://localhost:5000/catagory/delete?id=${id}`)
-      .then((res) => {
-        if (res.data.deletedCount > 0) {
-          Swal.fire({
-            position: "top-center",
-            icon: "success",
-            title: "Success the delete product",
-            showConfirmButton: false,
-            timer: 1500,
-            background: "black",
-            color: "white",
+    Swal.fire({
+      title: "Are you sure?",
+      text: "delete the job post",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#142F5C",
+      cancelButtonColor: "#142F5C",
+      confirmButtonText: "Yes, delete it!",
+      background: "black",
+      color: "white",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .delete(`http://localhost:5000/catagory/delete?id=${id}`)
+          .then((res) => {
+            if (res.data.deletedCount > 0) {
+              Swal.fire({
+                position: "top-center",
+                icon: "success",
+                title: "Success the delete job",
+                showConfirmButton: false,
+                timer: 1500,
+                background: "black",
+                color: "white",
+              });
+              refetch();
+            }
           });
-          refetch();
-        }
-      });
+      }
+    });
   };
-  const hendelUpdated = (id) =>{
-  axios
-      .put(`http://localhost:5000/catagory/updated?id=${id}`,myjob)
-      .then((res) => {
-        /* if (res.data.deletedCount > 0) {
-          Swal.fire({
-            position: "top-center",
-            icon: "success",
-            title: "Success the delete product",
-            showConfirmButton: false,
-            timer: 1500,
-            background: "black",
-            color: "white",
-          });
-          refetch();
-        } */
-
-        console.log(res.data);
-      });
-  }
   return (
     <div className="p-5 mb-5 border-2 rounded-xl bg-base-200">
       <h2 className="text-lg md:text-2xl text-left font-medium text-black">
@@ -72,9 +68,13 @@ const MyPostedJobsCart = ({ myjob, refetch }) => {
         Description : {description}
       </h1>
       <div className=" md:flex gap-5 ">
-        <button onClick={()=> hendelUpdated(_id)} className="uppercase py-2 px-6 w-full mb-2 md:mb-0 md:w-fit items-center justify-center bg-[#142F5C] text-white text-2xl font-medium  rounded-xl">
+        <Link to={`/myPostedJobs/${_id}`}>
+        <button
+          className="uppercase py-2 px-6 w-full mb-2 md:mb-0 md:w-fit items-center justify-center bg-[#142F5C] text-white text-2xl font-medium  rounded-xl"
+        >
           update
         </button>
+        </Link>
         <button
           onClick={() => hendelDelete(_id)}
           className="uppercase py-2 px-6 w-full md:w-fit items-center justify-center bg-[#142F5C] text-white text-2xl font-medium rounded-xl"

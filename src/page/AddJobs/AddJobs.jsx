@@ -8,9 +8,9 @@ import { AuthContext } from "../Authentication/AuthProvider/AuthProvider";
 const AddJobs = () => {
     const [selectedTypeValue,setSelectedTypeValue] = useState('')
     const [selectedCategoryValue,setSelectedCategoryValue] = useState('')
+    const currentDate = new Date().toISOString().split('T')[0];
     const { user } = useContext(AuthContext);
     const navigate = useNavigate()
-    const currentDate = new Date().toISOString().split('T')[0];
     const hendelAddJob = (e) => {
     e.preventDefault();
     const target = e.target;
@@ -21,6 +21,7 @@ const AddJobs = () => {
     const minimumPrice = target.minimumPrice.value;
     const maximumPrice = target.maximumPrice.value;
     const addJobData = {
+      // _id, job_title,deadline, maximum_price, minimum_price,
         email,
         job_title: title,
         deadline,
@@ -31,6 +32,7 @@ const AddJobs = () => {
         maximum_price: maximumPrice,
     }
     axios.post("http://localhost:5000/catagory", addJobData).then((res) => {
+      console.log(res.data)
       if (res.data.insertedId) {
         Swal.fire({
           position: "top-center",
@@ -42,10 +44,8 @@ const AddJobs = () => {
         navigate("/myPostedJobs");
       }
     });
-    console.log(addJobData)
 };
   return (
-    <div>
       <div className="w-11/12 mx-auto p-5 grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
         <div>
           <Lottie animationData={addjob} loop={true} />
@@ -180,7 +180,6 @@ const AddJobs = () => {
         </div>
         <div />
       </div>
-    </div>
   );
 };
 

@@ -7,6 +7,7 @@ import DatelisCatagory from "../../companent/Catagoreis/DatelisCatagory";
 import MyBids from "../MyBids/MyBids";
 import AddJobs from "../AddJobs/AddJobs";
 import MyPostedJobs from "../MyPostedJobs/MyPostedJobs";
+import Updated from "../MyPostedJobs/Update/Updated";
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -29,6 +30,11 @@ export const router = createBrowserRouter([
             {
                 path: '/myPostedJobs',
                 element: <MyPostedJobs/>
+            },
+            {
+                path: '/myPostedJobs/:id',
+                element: <Updated/>,
+                loader: ({params})=>fetch(`http://localhost:5000/catagorys/${params.id}`)
             },
             {
                 path: '/myBids',
