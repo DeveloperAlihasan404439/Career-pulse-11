@@ -29,7 +29,24 @@ const MyPostedJobsCart = ({ myjob, refetch }) => {
       });
   };
   const hendelUpdated = (id) =>{
-    console.log(id);
+  axios
+      .put(`http://localhost:5000/catagory/updated?id=${id}`,myjob)
+      .then((res) => {
+        /* if (res.data.deletedCount > 0) {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Success the delete product",
+            showConfirmButton: false,
+            timer: 1500,
+            background: "black",
+            color: "white",
+          });
+          refetch();
+        } */
+
+        console.log(res.data);
+      });
   }
   return (
     <div className="p-5 mb-5 border-2 rounded-xl bg-base-200">
