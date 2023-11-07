@@ -1,24 +1,27 @@
 import axios from "axios";
 import Swal from "sweetalert2";
-
+import "react-step-progress-bar/styles.css";
+import { ProgressBar, Step } from "react-step-progress-bar";
+import stap1 from '../../assets/love.png'
+import stap2 from '../../assets/loved.png'
 const BidRequestTable = ({ mybid, index, refetch }) => {
-    console.log(mybid);
-  const { _id, job_title, user_email, deadline, price,status } = mybid;
+  console.log(mybid);
+  const { _id, job_title, user_email, deadline, price, status } = mybid;
   const hendelAccept = (id) => {
-  axios
-    .patch(`http://localhost:5000/myBids/accept?id=${id}`, mybid)
-    .then((res) => {
-      if (res.data.modifiedCount) {
-        Swal.fire({
-          title: "Are you sure?",
-          text: "Bid job requst  has be accept",
-          icon: "success",
-          background: "black",
-          color: "white",
-        });
-        refetch()
-      }
-    });
+    axios
+      .patch(`http://localhost:5000/myBids/accept?id=${id}`, mybid)
+      .then((res) => {
+        if (res.data.modifiedCount) {
+          Swal.fire({
+            title: "Are you sure?",
+            text: "Bid job requst  has be accept",
+            icon: "success",
+            background: "black",
+            color: "white",
+          });
+          refetch();
+        }
+      });
   };
   const hendelReject = (id) => {
     axios
@@ -32,7 +35,7 @@ const BidRequestTable = ({ mybid, index, refetch }) => {
             background: "black",
             color: "white",
           });
-          refetch()
+          refetch();
         }
       });
   };
@@ -44,23 +47,57 @@ const BidRequestTable = ({ mybid, index, refetch }) => {
       <td>{deadline}</td>
       <td>{price}</td>
       <th>
-        <div className="flex justify-around">
-          <button
-            onClick={() => hendelAccept(_id)}
-            className="px-3 bg-[#142F5C] text-white py-1 h-full rounded-lg"
-          >
-            Accept
-          </button>
-          <button
-            onClick={() => hendelReject(_id)}
-            className="px-3 bg-[#142F5C] text-white py-1 h-full rounded-lg"
-          >
-            {
-                status === "Canceled"?"Rejected":"Reject"
-            }
-            
-          </button>
-        </div>
+        {status === "In progress" || status === "Complete" ? (
+          <>
+            <ProgressBar
+              percent={status === "In progress"? 50 : 100}
+              filledBackground="linear-gradient(to right, #142F5C, #f0bb31)"
+            >
+              <Step transition="scale">
+                {({ accomplished }) => (
+                  <img
+                    style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
+                    width="30"
+                    src={stap1}
+                  />
+                )}
+              </Step>
+              <Step transition="scale">
+                {({ accomplished }) => (
+                  <img
+                    style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
+                    width="30"
+                    src={stap2}
+                  />
+                )}
+              </Step>
+              <Step transition="scale">
+                {({ accomplished }) => (
+                  <img
+                    style={{ filter: `grayscale(${accomplished ? 0 : 80}%)` }}
+                    width="30"
+                    src="https://orig00.deviantart.net/493a/f/2017/095/5/4/raichu_icon_by_pokemonshuffle_icons-db4ryym.png"
+                  />
+                )}
+              </Step>
+            </ProgressBar>
+          </>
+        ) : (
+          <div className="flex gap-5 justify-around">
+            <button
+              onClick={() => hendelAccept(_id)}
+              className="px-3 bg-[#142F5C] text-white py-1 h-full rounded-lg"
+            >
+              Accept
+            </button>
+            <button
+              onClick={() => hendelReject(_id)}
+              className="px-3 bg-[#142F5C] text-white py-1 h-full rounded-lg"
+            >
+              {status === "Canceled" ? "Rejected" : "Reject"}
+            </button>
+          </div>
+        )}
       </th>
     </tr>
   );

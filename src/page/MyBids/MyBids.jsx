@@ -38,7 +38,6 @@ const MyBids = () => {
           </span>
         </h1>
         <table className="table">
-          {/* head */}
           <thead>
             <tr>
               <th>No</th>
