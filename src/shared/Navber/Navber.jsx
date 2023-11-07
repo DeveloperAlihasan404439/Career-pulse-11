@@ -132,13 +132,13 @@ const Navber = () => {
                   </div>
                 </MenuButton>
                 <MenuList>
-                  <div className="bg-[#142F5C] z-10 text-black p-5 text-xl mt-1 rounded b-lg text-right">
+                  <div className="bg-[#142F5C] z-10 text-white p-5 text-xl mt-1 rounded b-lg text-right">
                     <MenuItem>{user.displayName}</MenuItem>
                     <MenuItem>{user.email}</MenuItem>
                     <MenuDivider className="my-2" />
                     <MenuItem  onClick={hendelLogOut}
                       
-                      className="bg-white  p-1 text-black w-full uppercase font-medium text-center rounded-lg "
+                      className=" p-1 bg-black w-full uppercase font-medium text-center rounded-lg "
                     >
                         log Out
                     </MenuItem>

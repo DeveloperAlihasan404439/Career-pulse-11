@@ -1,233 +1,273 @@
- [
-       {
-          "email": "webdev1@company.com",
-          "job_title": "Web Developer",
-          "deadline": "2023-12-31",
-          "description": "Join our web development team to create and maintain websites. Proficiency in HTML, CSS, and JavaScript required.",
-          "category": "Web Development",
-          "type":"Development",
-          "them_url":"https://i.ibb.co/0r8vs7W/Web-Developer-3.png",
-          "minimum_price": 50000,
-          "maximum_price": 70000
-       },
-       {
-          "email": "webdev2@company.com",
-          "job_title": "Software Developer",
-          "deadline": "2023-12-31",
-          "description": "Seeking a front-end developer to build user interfaces and enhance user experiences. Proficiency in React and UI/UX design preferred.",
-          "category": "Web Development",
-          "type":"Development",
-          "them_url":"https://i.ibb.co/K7ncB2C/suftower-developer.png",
-          "minimum_price": 55000,
-          "maximum_price": 75000
-       },
-       {
-          "email": "webdev3@company.com",
-          "job_title": "Full-Stack Developer",
-          "deadline": "2023-12-31",
-          "description": "Join our full-stack development team to work on both front-end and back-end components of web applications.",
-          "category": "Web Development",
-          "them_url":"https://i.ibb.co/gycpX7q/Web-Developer-4.png",
-          "minimum_price": 60000,
-          "maximum_price": 80000
-       },
-       {
-          "email": "webdev4@company.com",
-          "job_title": "UI/UX Designer",
-          "deadline": "2023-12-31",
-          "description": "Looking for a UI/UX designer to create visually appealing and user-friendly web interfaces.",
-          "category": "Web Development",
-          "type":"Development",
-          "them_url":"https://i.ibb.co/zHfKr6G/UIUX-developer.png",
-          "minimum_price": 55000,
-          "maximum_price": 75000
-       },
-       {
-          "email": "webdev5@company.com",
-          "job_title": "Back-End Developer",
-          "deadline": "2023-12-31",
-          "description": "Join our back-end development team to work on server-side logic and databases for web applications.",
-          "category": "Web Development",
-          "type":"Development",
-          "them_url":"https://i.ibb.co/5kxtY8N/Web-Developer-2.png",
-          "minimum_price": 60000,
-          "maximum_price": 80000
-       },
-       {
-          "email": "webdev6@company.com",
-          "job_title": "Web Development Intern",
-          "deadline": "2023-12-31",
-          "description": "Internship opportunity for aspiring web developers. Learn and contribute to real-world web projects.",
-          "category": "Web Development",
-          "type":"Development",
-          "them_url":"https://i.ibb.co/L0v2H1g/Web-Developer-1.png",
-          "minimum_price": 30000,
-          "maximum_price": 40000
-       },
-       {
-          "email": "webdev7@company.com",
-          "job_title": "Web Development Manager",
-          "deadline": "2023-12-31",
-          "description": "Lead our web development team, oversee projects, and ensure successful web application development.",
-          "category": "Web Development",
-          "type":"Development",
-          "them_url":"https://i.ibb.co/1q5kjTT/Web-Development-Manager.png",
-          "minimum_price": 75000,
-          "maximum_price": 95000
-       },
-       {
-          "email": "marketing1@company.com",
-          "job_title": "Digital Marketing Specialist",
-          "deadline": "2023-12-31",
-          "description": "Join our digital marketing team to create and manage online marketing campaigns. Experience in SEO, SEM, and social media required.",
-          "category": "Digital Marketing",
-          "type":"Marketing",
-          "them_url":"https://i.ibb.co/pR7fCWc/Digital-Marketing-Specialist1.png",
-          "minimum_price": 60000,
-          "maximum_price": 80000
-       },
-       {
-          "email": "marketing2@company.com",
-          "job_title": "Digital Marketing Manager",
-          "deadline": "2023-12-31",
-          "description": "Lead our digital marketing efforts, strategize campaigns, and drive online brand visibility.",
-          "category": "Digital Marketing",
-          "type":"Marketing",
-          "them_url":"https://i.ibb.co/Df049yr/Digital-Marketing-Specialis2.png",
-          "minimum_price": 70000,
-          "maximum_price": 90000
-       },
-       {
-          "email": "marketing3@company.com",
-          "job_title": "Social Media Manager",
-          "deadline": "2023-12-31",
-          "description": "Manage and enhance our social media presence, engage with the audience, and grow our online community.",
-          "category": "Digital Marketing",
-          "type":"Marketing",
-          "them_url":"https://i.ibb.co/rQFCmNj/Social-Media-Manager.png",
-          "minimum_price": 55000,
-          "maximum_price": 75000
-       },
-       {
-          "email": "marketing4@company.com",
-          "job_title": "SEO Specialist",
-          "deadline": "2023-12-31",
-          "description": "Optimize our web content for search engines, improve rankings, and drive organic traffic.",
-          "category": "Digital Marketing",
-          "type":"Marketing",
-          "them_url":"https://i.ibb.co/4jTDtDz/SEO-Specialist.png",
-          "minimum_price": 55000,
-          "maximum_price": 75000
-       },
-       {
-          "email": "marketing5@company.com",
-          "job_title": "Content Marketing Coordinator",
-          "deadline": "2023-12-31",
-          "description": "Create compelling content and manage content marketing strategies to attract and retain customers.",
-          "category": "Digital Marketing",
-          "type":"Marketing",
-          "them_url":"https://i.ibb.co/MP0tByr/Content-Marketing-Coordinator.png",
-          "minimum_price": 50000,
-          "maximum_price": 70000
-       },
-       {
-          "email": "marketing6@company.com",
-          "job_title": "Email Marketing Specialist",
-          "deadline": "2023-12-31",
-          "description": "Design and execute email marketing campaigns, optimize open rates, and drive customer engagement.",
-          "category": "Digital Marketing",
-          "type":"Marketing",
-          "them_url":"https://i.ibb.co/mJrN89c/Email-Marketing-Specialist.png",
-          "minimum_price": 55000,
-          "maximum_price": 75000
-       },
-       {
-          "email": "marketing7@company.com",
-          "job_title": "Digital Marketing Analyst",
-          "deadline": "2023-12-31",
-          "description": "Analyze digital marketing data, track KPIs, and provide insights for data-driven decision-making.",
-          "category": "Digital Marketing",
-          "type":"Marketing",
-          "them_url":"https://i.ibb.co/0ffvm5v/Digital-Marketing-Analyst.png",
-          "minimum_price": 60000,
-          "maximum_price": 80000
-       },
-       {
-          "email": "design1@company.com",
-          "job_title": "Graphic Designer",
-          "deadline": "2023-12-31",
-          "description": "Join our graphics design team to create visually stunning graphics and illustrations. Proficiency in Adobe Creative Suite required.",
-          "category": "Graphics Design",
-          "type":"Graphics",
-          "them_url":"https://i.ibb.co/1RBgfXS/Graphic-Designer.png",
-          "minimum_price": 55000,
-          "maximum_price": 75000
-       },
-       {
-          "email": "design2@company.com",
-          "job_title": "UI/UX Designer",
-          "deadline": "2023-12-31",
-          "description": "Design user interfaces and enhance user experiences through creative and intuitive design. Proficiency in UI/UX principles required.",
-          "category": "Graphics Design",
-          "type":"Graphics",
-          "them_url":"https://i.ibb.co/fSCmKmQ/UIUX-Designer3.png",
-          "minimum_price": 60000,
-          "maximum_price": 80000
-       },
-       {
-          "email": "design3@company.com",
-          "job_title": "Visual Content Creator",
-          "deadline": "2023-12-31",
-          "description": "Create visual content for marketing materials, social media, and websites. Proficiency in Adobe Creative Suite and photography skills preferred.",
-          "category": "Graphics Design",
-          "type":"Graphics",
-          "them_url":"https://i.ibb.co/wNDy8n3/Visual-Content-Creator3.png",
-          "minimum_price": 55000,
-          "maximum_price": 75000
-       },
-       {
-          "email": "design4@company.com",
-          "job_title": "Brand Identity Designer",
-          "deadline": "2023-12-31",
-          "description": "Develop and maintain brand identities, logos, and style guides. Proficiency in brand design and visual branding required.",
-          "category": "Graphics Design",
-          "type":"Graphics",
-          "them_url":"https://i.ibb.co/MkGwVRZ/Brand-Identity-Designer3.png",
-          "minimum_price": 60000,
-          "maximum_price": 80000
-       },
-       {
-          "email": "design5@company.com",
-          "job_title": "Packaging Designer",
-          "deadline": "2023-12-31",
-          "description": "Design product packaging that attracts customers and conveys brand messaging. Proficiency in packaging design and marketing preferred.",
-          "category": "Graphics Design",
-          "type":"Graphics",
-          "them_url":"https://i.ibb.co/mqq6p8p/Packaging-Designer.png",
-          "minimum_price": 55000,
-          "maximum_price": 75000
-       },
-       {
-          "email": "design6@company.com",
-          "job_title": "Motion Graphics Designer",
-          "type":"Graphics",
-          "deadline": "2023-12-31",
-          "description": "Create engaging motion graphics and animations for marketing campaigns and multimedia projects. Proficiency in motion graphics required.",
-          "category": "Graphics Design",
-          "them_url":"https://i.ibb.co/MPVMBjs/Motion-Graphics-Designer.png",
-          "minimum_price": 60000,
-          "maximum_price": 80000
-       },
-       {
-          "email": "design7@company.com",
-          "job_title": "Graphics Design Manager",
-          "type":"Graphics",
-          "deadline": "2023-12-31",
-          "description": "Lead our graphics design team, oversee creative projects, and ensure high-quality design deliverables.",
-          "category": "Graphics Design",
-          "them_url":"https://i.ibb.co/VLSGhqd/Graphics-Design-Manager3.png",
-          "minimum_price": 75000,
-          "maximum_price": 95000
-       }
-    ]
- 
+[
+   {
+     "name": "John Doe",
+     "job": "Web Developer",
+     "images": "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Senior Front-end Developer"
+   
+   },
+   {
+     "name": "Jane Doe",
+     "job": "Web Developer",
+     "images": "https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Back-end Developer"
+   
+   },
+   {
+     "name": "Peter Smith",
+     "job": "Web Developer",
+     "images": "https://img.freepik.com/free-photo/smiley-handsome-man-posing_23-2148911841.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Full-stack Developer"
+   
+   },
+   {
+     "name": "Mary Smith",
+     "job": "Web Designer",
+     "images": "https://img.freepik.com/free-photo/smiling-man-sitting-street-cafe-table-with-his-arms-crossed_1262-19055.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "UX/UI Designer"
+   
+   },
+   {
+     "name": "David Jones",
+     "job": "DevOps Engineer",
+     "images": "https://img.freepik.com/free-photo/smiling-caucasian-guy-with-beard-looking-happy_176420-18707.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Senior DevOps Engineer"
+   
+   },
+   {
+     "name": "Susan Lee",
+     "job": "Product Manager",
+     "images": "https://img.freepik.com/free-photo/man-isolated-showing-facial-emotions_1303-20261.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Product Manager"
+   
+   },
+   {
+     "name": "Mike Johnson",
+     "job": "Business Analyst",
+     "images": "https://img.freepik.com/free-photo/porait-cute-boy-cafe_23-2148436119.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Business Analyst"
+   
+   },
+   {
+     "name": "Amy Wilson",
+     "job": "Project Manager",
+     "images": "https://img.freepik.com/free-photo/portrait-friendly-confident-caucasian-bearded-guy-with-moustache-wearing-glasses-smiling-politely-looking-relaxed-calm-gray-wall-listening-customer-complaint-gray-wall_176420-22514.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Senior Project Manager"
+   
+   },
+   {
+     "name": "Mark Brown",
+     "job": "Quality Assurance Tester",
+     "images": "https://img.freepik.com/free-photo/cute-smiling-young-man-with-bristle-looking-satisfied_176420-18989.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Senior Quality Assurance Tester"
+   
+   },
+   {
+     "name": "Jennifer Williams",
+     "job": "Technical Writer",
+     "images": "https://img.freepik.com/free-photo/young-man-wearing-blue-outfit-looking-confident_1298-291.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Technical Writer"
+   
+   },
+   {
+     "name": "Sarah Jones",
+     "job": "Web Developer",
+     "images": "https://img.freepik.com/free-photo/portrait-hapy-young-smart-man-glasses-white-wall_231208-12206.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Front-end Developer"
+   
+   },
+   {
+     "name": "Michael Brown",
+     "job": "Web Developer",
+     "images": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Back-end Developer"
+   
+   },
+   {
+     "name": "Emily Davis",
+     "job": "Web Developer",
+     "images": "https://img.freepik.com/free-photo/waist-up-shot-healthy-happy-caucasian-guy-with-short-haircut_176420-24242.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Full-stack Developer"
+   
+   },
+   {
+     "name": "Mark Taylor",
+     "job": "Web Designer",
+     "images": "https://img.freepik.com/free-photo/handsome-young-guy-with-glasses-posing_176420-30004.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "UX/UI Designer"
+   
+   },
+   {
+     "name": "Karen Robinson",
+     "job": "DevOps Engineer",
+     "images": "https://img.freepik.com/free-photo/close-up-portrait-curly-handsome-european-male_176532-8133.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "DevOps Engineer"
+   
+   },
+   {
+     "name": "David Miller",
+     "job": "Product Manager",
+     "images": "https://img.freepik.com/free-photo/smiling-caucasian-young-guy-wearing-pink-shirt-isolated-white-background_141793-38614.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Product Manager"
+   
+   },
+   {
+     "name": "Maria Garcia",
+     "job": "Business Analyst",
+     "images": "https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Business Analyst"
+   
+   },
+   {
+     "name": "Paul Hernandez",
+     "job": "Project Manager",
+     "images": "https://img.freepik.com/free-photo/handsome-man-home_144627-9257.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Project Manager"
+   
+   },
+   {
+     "name": "Lisa Anderson",
+     "job": "Quality Assurance Tester",
+     "images": "https://img.freepik.com/free-photo/man-posing-home_144627-37401.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Quality Assurance Tester"
+   
+   },
+   {
+     "name": "John Doe",
+     "job": "Web Developer",
+     "images": "https://img.freepik.com/free-photo/smiley-man-relaxing-outdoors_23-2148739334.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Senior Front-end Developer"
+
+   },
+   {
+     "name": "Jane Doe",
+     "job": "Web Developer",
+     "images": "https://img.freepik.com/premium-photo/man-cheerful-studio-portrait-concept_53876-45003.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Back-end Developer"
+
+   },
+   {
+     "name": "Peter Smith",
+     "job": "Web Developer",
+     "images": "https://img.freepik.com/free-photo/smiling-male-entrepreneur-with-beard-mustache-crossing-arms-chest_1262-14404.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Full-stack Developer"
+
+   },
+   {
+     "name": "Mary Smith",
+     "job": "Web Designer",
+     "images": "https://img.freepik.com/free-photo/serious-man-teacher-with-confident-clever-look-has-beard-mustache-listens-pupil-s-answer-wears-pink-sweater-round-glasses_273609-16686.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "UX/UI Designer"
+
+   },
+   {
+     "name": "David Jones",
+     "job": "DevOps Engineer",
+     "images": "https://img.freepik.com/free-photo/high-view-shot-smiley-man-wearing-cap_23-2148283857.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Senior DevOps Engineer"
+
+   },
+   {
+     "name": "Susan Lee",
+     "job": "Product Manager",
+     "images": "https://img.freepik.com/free-photo/portrait-handsome-young-man-with-arms-crossed-holding-white-headphone-around-his-neck_23-2148096439.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Senior DevOps Engineer"
+
+   },
+   {
+     "name": "Mike Johnson",
+     "job": "Business Analyst",
+     "images": "https://img.freepik.com/free-photo/business-man-by-skyscraper_1303-13655.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Business Analyst"
+
+   },
+   {
+     "name": "Amy Wilson",
+     "job": "Project Manager",
+     "images": "https://img.freepik.com/free-photo/handsome-man-with-glasses_144627-18665.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Senior Project Manager"
+
+   },
+   {
+     "name": "Mark Brown",
+     "job": "Quality Assurance Tester",
+     "images": "https://img.freepik.com/free-photo/front-view-portrait-businessman-with-glasses_23-2148816831.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Senior Quality Assurance Tester"
+
+   },
+   {
+     "name": "Jennifer Williams",
+     "job": "Technical Writer",
+     "images": "https://img.freepik.com/free-photo/handsome-man-with-shiny-skin-posing_23-2149396129.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "title": "Technical Writer"
+
+   },
+   {
+     "category": "SEO Specialist",
+     "name": "John Doe",
+     "images": "https://img.freepik.com/free-photo/dark-blonde-bearded-man-crosses-his-hands-chest-posing-black-shirt_8353-1116.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais", 
+     "job": "Digital Marketing Specialist",
+     "title": "SEO Specialist"
+   },
+   {
+     "category": "PPC Specialist",
+     "name": "Jane Doe",
+     "images": "https://img.freepik.com/free-photo/smiling-millennial-man-looking-camera-cafe-headshot-portrait_1163-5163.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "job": "Digital Marketing Specialist",
+     "title": "PPC Specialist"
+   },
+   {
+     "category": "Social Media Marketing Specialist",
+     "name": "Peter Smith",
+     "images": "https://img.freepik.com/free-photo/portrait-handsome-man-smiling_23-2148729669.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "job": "Digital Marketing Specialist",
+     "title": "Social Media Marketing Specialist"
+   },
+   {
+     "category": "Content Marketing Specialist",
+     "name": "Mary Smith",
+     "images": "https://img.freepik.com/free-photo/handsome-happy-bearded-man_74855-2827.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais", 
+     "job": "Digital Marketing Specialist",
+     "title": "Content Marketing Specialist"
+   },
+   {
+     "category": "Email Marketing Specialist",
+     "name": "David Jones",
+     "images": "https://img.freepik.com/free-photo/cheerful-man-looking-camera_23-2147797657.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "job": "Digital Marketing Specialist",
+     "title": "Email Marketing Specialist"
+   },
+   {
+     "category": "Digital Marketing Manager",
+     "name": "Susan Lee",
+     "images": "https://img.freepik.com/free-photo/positive-pleased-male-with-curly-hair_176532-8136.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais", 
+     "job": "Digital Marketing Manager",
+     "title": "Digital Marketing Manager"
+   },
+   {
+     "category": "Digital Marketing Analyst",
+     "name": "Mike Johnson",
+     "images": "https://img.freepik.com/free-photo/international-medical-student-man-blue-uniform-doctor-with-stethoscope_1157-43732.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "job": "Digital Marketing Analyst",
+     "title": "Digital Marketing Analyst"
+   },
+   {
+     "name": "Amy Wilson",
+     "images": "https://img.freepik.com/free-photo/close-up-portrait-smiling-young-bearded-man_171337-4819.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais",
+     "job": "Digital Marketing Strategist",
+     "title": "Digital Marketing Strategist"
+   },
+   {
+     "name": "Mark Brown",
+     "images": "https://img.freepik.com/free-photo/handsome-bearded-guy-looking-wearing-outdoor-clothes_176420-18777.jpg?size=626&ext=jpg&uid=R116477275&ga=GA1.1.1051774158.1699368414&semt=ais", 
+     "job": "Digital Marketing Consultant",
+     "title": "Digital Marketing Consultant"
+   },
+   {
+     "name": "Jennifer Williams",
+     "images": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHVzZXIlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D",
+     "job": "Digital Marketing Freelancer",
+     "title": "Digital Marketing Freelancer"
+   }
+]
+  
