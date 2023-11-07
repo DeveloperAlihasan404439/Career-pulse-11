@@ -11,8 +11,9 @@ import {
   MenuItem,
   MenuDivider,
 } from "@chakra-ui/react";
+import Swal from "sweetalert2";
 const Navber = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOutUser } = useContext(AuthContext);
   const nav = (
     <>
       <NavLink to="/" className="mb-1 lg:mb-0">
@@ -38,6 +39,23 @@ const Navber = () => {
       </NavLink>
     </>
   );
+  const hendelLogOut = ()=>{
+    console.log(logOutUser,"logOut");
+    logOutUser()
+    .then(result =>{
+      Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Successfull in the registor',
+        showConfirmButton: false,
+        timer: 1500,
+        
+      })
+    })
+    .catch(error =>{
+      console.log(error.message);
+    })
+  }
   return (
     <div className="bg-[#0B1221] sticky top-0 left-0 w-full py-2 z-40">
       <div className="flex justify-between items-center w-11/12 mx-auto">
@@ -75,7 +93,7 @@ const Navber = () => {
                       </div>
                       <p className="text-white text-sm">{user.email}</p>
                     </div>
-                    <NavLink onClick={logOut} className="mb-1 lg:mb-0">
+                    <NavLink onClick={hendelLogOut} className="mb-1 lg:mb-0">
                       log Out
                     </NavLink>
                   </>
@@ -114,17 +132,15 @@ const Navber = () => {
                   </div>
                 </MenuButton>
                 <MenuList>
-                  <div className="bg-[#142F5C] z-10 text-white p-5 text-xl mt-1 rounded b-lg text-right">
+                  <div className="bg-[#142F5C] z-10 text-black p-5 text-xl mt-1 rounded b-lg text-right">
                     <MenuItem>{user.displayName}</MenuItem>
                     <MenuItem>{user.email}</MenuItem>
                     <MenuDivider className="my-2" />
-                    <MenuItem
-                      onClick={logOut}
-                      className="bg-white  p-1 rounded-lg "
+                    <MenuItem  onClick={hendelLogOut}
+                      
+                      className="bg-white  p-1 text-black w-full uppercase font-medium text-center rounded-lg "
                     >
-                      <span className="text-black uppercase font-medium text-center">
                         log Out
-                      </span>
                     </MenuItem>
                   </div>
                 </MenuList>

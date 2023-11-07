@@ -5,8 +5,9 @@ import Lottie from "lottie-react";
 import Swal from 'sweetalert2'
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet";
 const SingUp = () => {
-  const { createUsers,logOut } = useContext(AuthContext);
+  const { createUsers,logOutUser } = useContext(AuthContext);
   const [error, setError] = useState('')
   const location = useLocation();
   const navigate = useNavigate()
@@ -25,7 +26,7 @@ const SingUp = () => {
         photoURL: photo
       })
       .then(()=>{
-        logOut()
+        logOutUser()
         Swal.fire({
           position: 'top-center',
           icon: 'success',
@@ -43,6 +44,9 @@ const SingUp = () => {
   }
   return (
     <div className="bg-[#142F5C]">
+      <Helmet>
+        <title>Career Pulse | Sing Up</title>
+      </Helmet>
       <div className=" min-h-[91vh] w-11/12 mx-auto flex items-center">
         <div className="hero-content w-full flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">

@@ -5,6 +5,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Authentication/AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet";
 const AddJobs = () => {
     const [selectedTypeValue,setSelectedTypeValue] = useState('')
     const [selectedCategoryValue,setSelectedCategoryValue] = useState('')
@@ -47,6 +48,10 @@ const AddJobs = () => {
 };
   return (
       <div className="w-11/12 mx-auto p-5 grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+        
+      <Helmet>
+        <title>Career Pulse | Add Job</title>
+      </Helmet>
         <div>
           <Lottie animationData={addjob} loop={true} />
         </div>

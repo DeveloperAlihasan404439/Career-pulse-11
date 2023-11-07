@@ -2,11 +2,14 @@ import Loding from '../../shared/Loding/Loding';
 import BannerShared from '../../shared/BannerShared/BannerShared';
 import useMyBids from '../../shared/Hooks/useMyBids';
 import BidRequestTable from './BidRequestTable';
+import { Helmet } from 'react-helmet';
 
 const BidRequest = () => {
     const {data, isLoading, refetch} = useMyBids()
   return (
-    <div>
+    <div><Helmet>
+    <title>Career Pulse | Bid Request</title>
+  </Helmet>
       <BannerShared
         url="https://img.freepik.com/free-photo/characters-looking-job_1156-558.jpg?w=826&t=st=1699287748~exp=1699288348~hmac=7360adafb1f27898b9c5d90a6860b7ccc415975b998c827d4cfe8419c0fc4122"
         title="Bid Requests All Jobs"

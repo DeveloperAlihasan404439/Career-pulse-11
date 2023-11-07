@@ -3,6 +3,7 @@ import BannerShared from "../../shared/BannerShared/BannerShared";
 import useMyBids from "../../shared/Hooks/useMyBids";
 import Loding from "../../shared/Loding/Loding";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const MyBids = () => {
   const { data, isLoading } = useMyBids();
@@ -26,6 +27,9 @@ const MyBids = () => {
   console.log(data);
   return (
     <div>
+      <Helmet>
+        <title>Career Pulse | My Bids</title>
+      </Helmet>
       <BannerShared
         url="https://img.freepik.com/free-photo/characters-looking-job_1156-558.jpg?w=826&t=st=1699287748~exp=1699288348~hmac=7360adafb1f27898b9c5d90a6860b7ccc415975b998c827d4cfe8419c0fc4122"
         title="My Bids All Jobs"

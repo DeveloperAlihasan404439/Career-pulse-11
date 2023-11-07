@@ -1,13 +1,13 @@
-import loding from './loding.json'
 import Lottie from 'lottie-react'
+import loding from './loader.json'
 const Loding = () => {
     return (
-        <div className='h-screen w-full flex justify-center items-center'>
+        <div className='h-screen w-full flex justify-center items-center bg-[#0B1221]'>
             <Lottie
                 animationData={loding}
                 loop={true}
-                className="w-full"
               />
+              
         </div>
     );
 };

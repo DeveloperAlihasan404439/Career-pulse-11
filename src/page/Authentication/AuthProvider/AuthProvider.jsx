@@ -17,39 +17,38 @@ const AuthProvider = ({children}) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, pass)
     }
-
-    
     const googleUser = () =>{
         setLoading(true)
         return signInWithPopup(auth, proviter)
     }
+    
+    const logOutUser = ()=>{
+        return signOut(auth)
+    }
     useEffect(()=>{
         const unSubscrib = onAuthStateChanged(auth, crrent =>{
-            const userCrrent = crrent.email || user.email;
+            const userCrrent = crrent?.email || user?.email;
             setUser(crrent)
             setLoading(false)
-          /*   if(userCrrent){
+            if(userCrrent){
                 const email = userCrrent
-                axios.post('http://localhost:5000/jwt', {email})
+                axios.post('http://localhost:5000/jwt', {email}, {withCredentials: true})
                 .then(res =>{
                     console.log(res.data);
                 })
-            } */
+            }
         })
         return ()=>{
             unSubscrib()
         }
     },[])
-    const logOut = ()=>{
-        return signOut(auth)
-    }
     const authInfo = {
         user,
         loading,
         createUsers,
         loginUser,
         googleUser,
-        logOut,
+        logOutUser,
     }
     return (
         <AuthContext.Provider value={authInfo}>

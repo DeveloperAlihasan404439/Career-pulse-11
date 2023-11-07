@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import Lottie from "lottie-react";
 import login from "./login.json";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 const LogIn = () => {
   const { loginUser, googleUser } = useContext(AuthContext);
   const [error, setError] = useState("");
@@ -49,6 +50,9 @@ const LogIn = () => {
   };
   return (
     <div className="bg-[#142F5C]">
+      <Helmet>
+        <title>Career Pulse | Log in</title>
+      </Helmet>
       <div className="md:min-h-[91vh] w-11/12 mx-auto flex items-center">
         <div className="w-full pt-10 md:pt-10 md:flex gap-5 items-center md:max-h-screen">
           <div className="text-center lg:text-left md:w-[50%] pb-5 md:pb-0">
