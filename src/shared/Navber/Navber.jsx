@@ -4,6 +4,13 @@ import { NavLink } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { useContext } from "react";
 import { AuthContext } from "../../page/Authentication/AuthProvider/AuthProvider";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuDivider,
+} from "@chakra-ui/react";
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
   const nav = (
@@ -11,16 +18,24 @@ const Navber = () => {
       <NavLink to="/" className="mb-1 lg:mb-0">
         Home
       </NavLink>
-      <NavLink to='/addjobs' className="mb-1 lg:mb-0">Add job</NavLink>
+      <NavLink to="/addjobs" className="mb-1 lg:mb-0">
+        Add job
+      </NavLink>
       {user ? (
         <>
-          <NavLink to ="myPostedJobs" className="mb-1 lg:mb-0">My posted jobs</NavLink>
-          <NavLink to="/myBids" className="mb-1 lg:mb-0">My Bids</NavLink>
-          <NavLink to='/bidRequest' className="mb-1 lg:mb-0">Bid Requests</NavLink>
+          <NavLink to="myPostedJobs" className="mb-1 lg:mb-0">
+            My posted jobs
+          </NavLink>
         </>
       ) : (
         ""
       )}
+      <NavLink to="/myBids" className="mb-1 lg:mb-0">
+        My Bids
+      </NavLink>
+      <NavLink to="/bidRequest" className="mb-1 lg:mb-0">
+        Bid Requests
+      </NavLink>
     </>
   );
   return (
@@ -88,17 +103,32 @@ const Navber = () => {
           </ul>
           <div>
             {user ? (
-              <div className="flex gap-5 items-center">
+              <Menu>
+                <MenuButton>
                   <div className="w-[50px] h-[50px] bg-[#142F5C] p-1 bg- border border-white rounded-[50%]">
-                    <img src={user.photoURL} alt="" className="w-full h-full rounded-[50%]" title={user.displayName}/>
+                    <img
+                      src={user.photoURL}
+                      alt=""
+                      className="w-full h-full rounded-[50%]"
+                    />
                   </div>
-                <NavLink
-                  onClick={logOut}
-                  className="mb-1 lg:mb-0 bg-[#142F5C] px-4 text-2xl py-1 rounded-lg text-white"
-                >
-                  Log Out
-                </NavLink>
-              </div>
+                </MenuButton>
+                <MenuList>
+                  <div className="bg-[#142F5C] z-10 text-white p-5 text-xl mt-1 rounded b-lg text-right">
+                    <MenuItem>{user.displayName}</MenuItem>
+                    <MenuItem>{user.email}</MenuItem>
+                    <MenuDivider className="my-2" />
+                    <MenuItem
+                      onClick={logOut}
+                      className="bg-white  p-1 rounded-lg "
+                    >
+                      <span className="text-black uppercase font-medium text-center">
+                        log Out
+                      </span>
+                    </MenuItem>
+                  </div>
+                </MenuList>
+              </Menu>
             ) : (
               <div className="flex gap-5">
                 <NavLink

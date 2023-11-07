@@ -10,6 +10,7 @@ import MyPostedJobs from "../MyPostedJobs/MyPostedJobs";
 import Updated from "../MyPostedJobs/Update/Updated";
 import RoutError from "../RoutError/RoutError";
 import BidRequest from "../MyBids/BidRequest";
+import ProviteRout from "../Authentication/ProviteRout/ProviteRout";
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -22,17 +23,17 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                element: <DatelisCatagory/>,
+                element: <ProviteRout><DatelisCatagory/></ProviteRout>,
                 loader: ({params})=>fetch(`http://localhost:5000/catagorys/${params.id}`)
 
             },
             {
                 path: '/addjobs',
-                element: <AddJobs/>
+                element: <ProviteRout><AddJobs/></ProviteRout>
             },
             {
                 path: '/myPostedJobs',
-                element: <MyPostedJobs/>
+                element: <ProviteRout><MyPostedJobs/></ProviteRout>
             },
             {
                 path: '/myPostedJobs/:id',
@@ -41,11 +42,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/myBids',
-                element: <MyBids/>
+                element: <ProviteRout><MyBids/></ProviteRout>
             },
             {
                 path: '/bidRequest',
-                element: <BidRequest/>
+                element: <ProviteRout><BidRequest/></ProviteRout>
             },
             {
                 path: '/login',
