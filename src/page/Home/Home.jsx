@@ -2,6 +2,7 @@ import Banner from "../../companent/Banner/Banner";
 import Candidates from "../../companent/Candidates/Candidates";
 import Catagoreis from "../../companent/Catagoreis/Catagoreis";
 import {Helmet} from "react-helmet";
+import Contack from "../../companent/Contack/Contack";
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
                 <Catagoreis/>
             </div>
             <Candidates/>
+            <Contack/>
             
 
         </div>

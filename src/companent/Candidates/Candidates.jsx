@@ -32,7 +32,7 @@ const Candidates = () => {
             <h1 className="text-2xl md:text-3xl lg:text-5xl text-white drop-shadow-2xl pb-3 text-center">
               Discover Candidates
             </h1>
-            <p className="md:w-8/12 mx-auto text-xl md:text-2xl font-medium text-white text-center"> Candidate discovery is an intuitive search capability that gives recruiters a head start by helping them quickly create a short list of past candidates who are a fit for new positions. This saves recruiters time, because they can now easily identify and re-engage known candidates instead of spending time trying to find new ones.</p>
+            <p className="md:w-8/12 mx-auto text-sm md:text-2xl font-medium text-white text-center"> Candidate discovery is an intuitive search capability that gives recruiters a head start by helping them quickly create a short list of past candidates who are a fit for new positions. This saves recruiters time, because they can now easily identify and re-engage known candidates instead of spending time trying to find new ones.</p>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ const Candidates = () => {
      }
       <div className=" mt-10 flex gap-2 justify-center items-center">
         {
-            pages?.map((page, i) => <button onClick={()=> setPagenition(i+1)} className="text-xl text-white bg-black py-3 px-5 rounded-[50%]" key={i}>{i + 1}</button>)
+            pages?.map((page, i) => <button onClick={()=> setPagenition(i+1)} className="text-lg md:text-xl text-white bg-black py-1 md:py-3 px-3 md:px-5 rounded-[50%]" key={i}>{i + 1}</button>)
         }
       </div>
      </div>
