@@ -32,7 +32,7 @@ const AuthProvider = ({children}) => {
             setLoading(false)
             if(userCrrent){
                 const email = userCrrent
-                axios.post('http://localhost:5000/jwt', {email}, {withCredentials: true})
+                axios.post('http://localhost:5000/jwt',{email}, {withCredentials: true})
                 .then(res =>{
                     console.log(res.data);
                 })

@@ -1,10 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import CandidatesCart from "./CandidatesCart";
 import { useState } from "react";
+import Loding from "../../shared/Loding/Loding";
 const Candidates = () => {
     const [pagenition, setPagenition] = useState(1)
-    
-    console.log(pagenition);
     const {data, isLoading} = useQuery({
         queryKey: ['pages',pagenition],
         queryFn: async()=>{
@@ -13,12 +12,10 @@ const Candidates = () => {
             return candidates;
         }
     })
-    if(isLoading){
-        console.log("isLoading");
-    }
     const result = data?.result
-    // const countpages = data?.counter;
-    const pages = [... new Array(4).fill(0)]
+    const countpages = data?.counter;
+    const totlePages = Math.ceil(countpages / 7)
+    const pages = [... new Array(6).fill(0)]
   return (
     <div className="pb-5 md:mb-16">
       <div
@@ -40,11 +37,14 @@ const Candidates = () => {
         </div>
       </div>
      <div className="w-11/12 mx-auto">
-     <div className=" mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+     {
+      isLoading? <Loding/>
+      : <div className=" mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {
             result?.map(results =><CandidatesCart key={results._id} results ={results}/>)
         }
       </div>
+     }
       <div className=" mt-10 flex gap-2 justify-center items-center">
         {
             pages?.map((page, i) => <button onClick={()=> setPagenition(i+1)} className="text-xl text-white bg-black py-3 px-5 rounded-[50%]" key={i}>{i + 1}</button>)

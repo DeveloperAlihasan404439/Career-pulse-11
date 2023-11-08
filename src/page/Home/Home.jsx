@@ -14,6 +14,7 @@ const Home = () => {
                 <Catagoreis/>
             </div>
             <Candidates/>
+            
 
         </div>
     );

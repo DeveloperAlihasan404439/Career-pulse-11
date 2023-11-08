@@ -4,7 +4,7 @@ const useMyBids = () => {
     const { data, isLoading, refetch } = useQuery({
         queryKey: ["mybids"],
         queryFn: async () => {
-          const catagoresData = await fetch(`http://localhost:5000/myBids`);
+          const catagoresData = await fetch('http://localhost:5000/myBids');
           const catagorys = await catagoresData.json();
           return catagorys;
         },

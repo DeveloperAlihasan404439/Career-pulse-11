@@ -1,13 +1,18 @@
 import axios from "axios";
 import BannerShared from "../../shared/BannerShared/BannerShared";
-import useMyBids from "../../shared/Hooks/useMyBids";
-import Loding from "../../shared/Loding/Loding";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
+import { useContext, useState } from "react";
+import { AuthContext } from "../Authentication/AuthProvider/AuthProvider";
 
 const MyBids = () => {
-  const { data, isLoading } = useMyBids();
-
+  const [myBids, setMyBids] = useState([]);
+  const {user} = useContext(AuthContext)
+  useState(() => {
+    axios
+      .get(`http://localhost:5000/myBids?email=${user.email}`,  { withCredentials: true })
+      .then((res) => setMyBids(res.data));
+  });
   const hendelComplete = (id) => {
     axios
       .patch(`http://localhost:5000/myBids/complete?id=${id}`)
@@ -24,7 +29,6 @@ const MyBids = () => {
         }
       });
   };
-  console.log(data);
   return (
     <div>
       <Helmet>
@@ -53,11 +57,7 @@ const MyBids = () => {
             </tr>
           </thead>
           <tbody>
-            {isLoading ? (
-              <Loding />
-            ) : (
-              <>
-                {data?.map((mybid, index) => (
+                {myBids?.map((mybid, index) => (
                   <tr key={index}>
                     <th>{index + 1}</th>
                     <td>{mybid?.job_title || "no title"}</td>
@@ -87,8 +87,6 @@ const MyBids = () => {
                     )}
                   </tr>
                 ))}
-              </>
-            )}
           </tbody>
         </table>
       </div>

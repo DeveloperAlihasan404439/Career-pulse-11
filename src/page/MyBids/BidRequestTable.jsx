@@ -5,7 +5,6 @@ import { ProgressBar, Step } from "react-step-progress-bar";
 import stap1 from '../../assets/love.png'
 import stap2 from '../../assets/loved.png'
 const BidRequestTable = ({ mybid, index, refetch }) => {
-  console.log(mybid);
   const { _id, job_title, user_email, deadline, price, status } = mybid;
   const hendelAccept = (id) => {
     axios
