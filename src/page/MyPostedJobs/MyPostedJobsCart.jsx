@@ -26,7 +26,7 @@ const MyPostedJobsCart = ({ myjob, refetch }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/catagory/delete?id=${id}`)
+          .delete(`https://serverlite-assignament.vercel.app/catagory/delete?id=${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
               Swal.fire({

@@ -10,12 +10,12 @@ const MyBids = () => {
   const {user} = useContext(AuthContext)
   useState(() => {
     axios
-      .get(`http://localhost:5000/myBids?email=${user.email}`,  { withCredentials: true })
+      .get(`https://serverlite-assignament.vercel.app/myBids?email=${user.email}`,  { withCredentials: true })
       .then((res) => setMyBids(res.data));
   });
   const hendelComplete = (id) => {
     axios
-      .patch(`http://localhost:5000/myBids/complete?id=${id}`)
+      .patch(`https://serverlite-assignament.vercel.app/myBids/complete?id=${id}`)
       .then((res) => {
         if (res.data.modifiedCount) {
           Swal.fire({

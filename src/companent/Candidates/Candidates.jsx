@@ -7,7 +7,7 @@ const Candidates = () => {
     const {data, isLoading} = useQuery({
         queryKey: ['pages',pagenition],
         queryFn: async()=>{
-            const candidatesData = await fetch(`http://localhost:5000/candidates?pages=${pagenition}`)
+            const candidatesData = await fetch(`https://serverlite-assignament.vercel.app/candidates?pages=${pagenition}`)
             const candidates = await candidatesData.json()
             return candidates;
         }

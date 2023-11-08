@@ -8,7 +8,7 @@ const BidRequestTable = ({ mybid, index, refetch }) => {
   const { _id, job_title, user_email, deadline, price, status } = mybid;
   const hendelAccept = (id) => {
     axios
-      .patch(`http://localhost:5000/myBids/accept?id=${id}`, mybid)
+      .patch(`https://serverlite-assignament.vercel.app/myBids/accept?id=${id}`, mybid)
       .then((res) => {
         if (res.data.modifiedCount) {
           Swal.fire({
@@ -24,7 +24,7 @@ const BidRequestTable = ({ mybid, index, refetch }) => {
   };
   const hendelReject = (id) => {
     axios
-      .patch(`http://localhost:5000/myBids/reject?id=${id}`, mybid)
+      .patch(`https://serverlite-assignament.vercel.app/myBids/reject?id=${id}`, mybid)
       .then((res) => {
         if (res.data.modifiedCount) {
           Swal.fire({

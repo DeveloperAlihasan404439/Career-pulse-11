@@ -22,7 +22,7 @@ const DatelisCatagory = () => {
       status: "Pending",
       user_email: user.email,
     };
-    axios.post("http://localhost:5000/myBids", myBids).then((res) => {
+    axios.post("https://serverlite-assignament.vercel.app/myBids", myBids).then((res) => {
       if (res.data.insertedId) {
         Swal.fire({
           position: "top-center",

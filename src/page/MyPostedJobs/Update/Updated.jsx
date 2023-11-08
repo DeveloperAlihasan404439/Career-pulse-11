@@ -38,7 +38,7 @@ const Updated = () => {
     }
     console.log(updatedJob);
     axios
-      .put(`http://localhost:5000/catagory/updated?id=${_id}`, updatedJob)
+      .put(`https://serverlite-assignament.vercel.app/catagory/updated?id=${_id}`, updatedJob)
       .then((res) => {
         if (res.data.modifiedCount > 0) {
           Swal.fire({

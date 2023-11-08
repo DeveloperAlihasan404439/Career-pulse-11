@@ -11,7 +11,7 @@ const MyPostedJobs = () => {
     queryKey: ["tacnologi", user],
     queryFn: async () => {
       const catagoresData = await fetch(
-        `http://localhost:5000/catagory?email=${user?.email}`
+        `https://serverlite-assignament.vercel.app/catagory?email=${user?.email}`
       );
       const catagorys = await catagoresData.json();
       return catagorys;

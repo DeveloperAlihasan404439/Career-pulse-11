@@ -32,7 +32,7 @@ const AddJobs = () => {
         minimum_price: minimumPrice,
         maximum_price: maximumPrice,
     }
-    axios.post("http://localhost:5000/catagory", addJobData).then((res) => {
+    axios.post("https://serverlite-assignament.vercel.app/catagory", addJobData).then((res) => {
       console.log(res.data)
       if (res.data.insertedId) {
         Swal.fire({

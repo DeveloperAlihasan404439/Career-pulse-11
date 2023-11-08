@@ -10,7 +10,7 @@ const BidRequest = () => {
   const {user} = useContext(AuthContext)
   useState(() => {
     axios
-      .get(`http://localhost:5000/myBids?email=${user.email}`, { withCredentials: true })
+      .get(`https://serverlite-assignament.vercel.app/myBids?email=${user.email}`, { withCredentials: true })
       .then((res) => setBidRequist(res.data));
   });
   return (
