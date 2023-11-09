@@ -14,28 +14,28 @@ import {
 import Swal from "sweetalert2";
 const Navber = () => {
   const { user, logOutUser } = useContext(AuthContext);
-  const [mode, setMode] = useState('light')
+  const [mode, setMode] = useState("light");
   const html = document.documentElement;
 
-  const changeHeldelThime = ()=>{
-    if(mode === "light"){
-      html.classList.remove('light');
-      html.classList.add('dark');
-      console.log(mode)
-       setMode('dark')
-       localStorage.setItem('mode', 'dark')
-    }else{
-      html.classList.remove('dark');
-      html.classList.add('light');
-      setMode('light')
-      localStorage.setItem('mode', 'light')
+  const changeHeldelThime = () => {
+    if (mode === "light") {
+      html.classList.remove("light");
+      html.classList.add("dark");
+      console.log(mode);
+      setMode("dark");
+      localStorage.setItem("mode", "dark");
+    } else {
+      html.classList.remove("dark");
+      html.classList.add("light");
+      setMode("light");
+      localStorage.setItem("mode", "light");
     }
-  }
-  useEffect(()=>{
-    const crrentMode = localStorage.getItem('mode') || "light"
-    setMode(crrentMode)
+  };
+  useEffect(() => {
+    const crrentMode = localStorage.getItem("mode") || "light";
+    setMode(crrentMode);
     html.classList.add(crrentMode);
-  },[])
+  }, []);
   const nav = (
     <>
       <NavLink to="/" className="mb-1 lg:mb-0">
@@ -88,7 +88,7 @@ const Navber = () => {
                 <FiMenu />
               </label>
             </div>
-            <div className="drawer-side  mt-[15%] md:mt-[8.8%] z-50">
+            <div className="drawer-side  mt-[12%] md:mt-[8.8%] z-50">
               <label
                 htmlFor="my-drawer-4"
                 aria-label="close sidebar"
@@ -100,17 +100,30 @@ const Navber = () => {
                 {user ? (
                   <>
                     <div>
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-[55px] h-[55px] bg-[#142F5C] p-1 bg- border border-white rounded-[50%]">
-                          <img
-                            src={user.photoURL}
-                            alt=""
-                            className="w-full h-full rounded-[50%]"
-                          />
+                      <div className="flex items-center justify-between gap-2 mb-2 h-fit w-full">
+                        <div className="flex items-center gap-2 md:gap-5">
+                          <div className="w-[55px] h-[55px] bg-[#142F5C] p-1 bg- border border-white rounded-[50%]">
+                            <img
+                              src={user.photoURL}
+                              alt=""
+                              className="w-full h-full rounded-[50%]"
+                            />
+                          </div>
+                          <h1 className="text-white text-xl">
+                            {user.displayName}
+                          </h1>
                         </div>
-                        <h1 className="text-white text-xl">
-                          {user.displayName}
-                        </h1>
+                        <div>
+                        <div
+                        onChange={changeHeldelThime}
+                        className="form-control"
+                      >
+                        <label className="label cursor-pointer">
+                          <span className="label-text"></span>
+                          <input type="checkbox" className="toggle" />
+                        </label>
+                      </div>
+                        </div>
                       </div>
                       <p className="text-white text-sm">{user.email}</p>
                     </div>
@@ -165,10 +178,13 @@ const Navber = () => {
                         log Out
                       </div>
 
-                      <div onChange={changeHeldelThime} className="form-control">
+                      <div
+                        onChange={changeHeldelThime}
+                        className="form-control"
+                      >
                         <label className="label cursor-pointer">
                           <span className="label-text"></span>
-                          <input type="checkbox" className="toggle"/>
+                          <input type="checkbox" className="toggle" />
                         </label>
                       </div>
                     </MenuItem>
@@ -189,7 +205,10 @@ const Navber = () => {
                 >
                   login
                 </NavLink>
-                <div onChange={changeHeldelThime} className="text-white rounded-[50%]">
+                <div
+                  onChange={changeHeldelThime}
+                  className="text-white rounded-[50%]"
+                >
                   <label className="swap swap-rotate">
                     <input type="checkbox" />
                     <svg

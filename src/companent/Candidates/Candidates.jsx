@@ -17,7 +17,7 @@ const Candidates = () => {
     const totlePages = Math.ceil(countpages / 7)
     const pages = [... new Array(6).fill(0)]
   return (
-    <div className="pb-5 md:mb-16">
+    <div className="pb-5 md:mb-10">
       <div
         className="h-[60vh]"
         style={{
@@ -37,6 +37,8 @@ const Candidates = () => {
         </div>
       </div>
      <div className="w-11/12 mx-auto">
+      
+     <h1 className="text-center text-2xl md:text-3xl font-medium pt-5"><span className="border-b-2 border-orange-500 rounded-lg p-3 dark:text-white dark:border-white">Our Developer</span> </h1>
      {
       isLoading? <Loding/>
       : <div className=" mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">

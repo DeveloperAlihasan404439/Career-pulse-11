@@ -3,6 +3,7 @@ import Candidates from "../../companent/Candidates/Candidates";
 import Catagoreis from "../../companent/Catagoreis/Catagoreis";
 import {Helmet} from "react-helmet";
 import Contack from "../../companent/Contack/Contack";
+import Compani from "../../companent/Compani/Compani";
 
 const Home = () => {
     return (
@@ -14,8 +15,9 @@ const Home = () => {
             <div className="w-11/12 mx-auto">
                 <Catagoreis/>
             </div>
-            <Candidates/>
             <Contack/>
+            <Candidates/>
+            <Compani/>
             
 
         </div>
