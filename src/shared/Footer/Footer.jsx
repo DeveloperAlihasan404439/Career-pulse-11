@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 import socel from './seocel.png'
 const Footer = () => {
   return (
-    <div className="bg-[#0B1221] md:relative">
-      <div className="hidden md:block">
+    <div className="bg-[#0B1221] lg:relative">
+      <div className="hidden lg:block h-full">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#142f5c"
@@ -15,8 +15,8 @@ const Footer = () => {
           ></path>
         </svg>
       </div>
-      <div className="bg-[#00000070] h-full flex items-center w-full md:absolute top-0 left-0">
-        <div className="w-11/12 mx-auto ">
+      <div className="bg-[#00000070] h-full flex items-center w-full lg:absolute top-0 left-0">
+        <div className="w-11/12 mx-auto py-5">
           <footer className="flex flex-wrap justify-around text-white">
             <div className="flex flex-col justify-center w-full md:w-auto">
               <div className="flex items-center justify-center ">
@@ -55,9 +55,11 @@ const Footer = () => {
               <a className="link link-hover">Jobs</a>
               <a className="link link-hover">Press kit</a>
             </div>
-            <div className=" md:mt-0 flex flex-col text-center md:text-left gap-1 text-xl w-full md:w-auto">
+            <div className=" md:mt-0 flex flex-col text-center md:text-left gap-1 text-xl w-full md:w-auto justify-center">
             <header>Social Media</header>
+            <div className="flex justify-center md:justify-start">
             <img src={socel} alt="" className="w-[100px]"/>
+            </div>
             <div className="bg-black rounded-md">
             <input
                   type="password"
