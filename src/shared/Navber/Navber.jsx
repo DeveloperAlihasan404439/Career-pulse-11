@@ -114,15 +114,15 @@ const Navber = () => {
                           </h1>
                         </div>
                         <div>
-                        <div
-                        onChange={changeHeldelThime}
-                        className="form-control"
-                      >
-                        <label className="label cursor-pointer">
-                          <span className="label-text"></span>
-                          <input type="checkbox" className="toggle" />
-                        </label>
-                      </div>
+                          <div
+                            onChange={changeHeldelThime}
+                            className="form-control"
+                          >
+                            <label className="label cursor-pointer">
+                              <span className="label-text"></span>
+                              <input type="checkbox" className="toggle" />
+                            </label>
+                          </div>
                         </div>
                       </div>
                       <p className="text-white text-sm">{user.email}</p>
@@ -139,6 +139,15 @@ const Navber = () => {
                     <NavLink to="/login" className="mb-1 lg:mb-0 ">
                       login
                     </NavLink>
+                    <div
+                            onChange={changeHeldelThime}
+                            className="form-control"
+                          >
+                            <label className="label cursor-pointer">
+                              <span className="label-text"></span>
+                              <input type="checkbox" className="toggle" />
+                            </label>
+                          </div>
                   </>
                 )}
               </ul>

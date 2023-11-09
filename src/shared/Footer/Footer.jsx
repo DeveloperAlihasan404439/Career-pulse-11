@@ -1,6 +1,7 @@
 import logo from "../../assets/logo.png";
 import name from "../../assets/name.png";
 import { NavLink } from "react-router-dom";
+import socel from './seocel.png'
 const Footer = () => {
   return (
     <div className="bg-[#0B1221] md:relative">
@@ -16,7 +17,7 @@ const Footer = () => {
       </div>
       <div className="bg-[#00000070] h-full flex items-center w-full md:absolute top-0 left-0">
         <div className="w-11/12 mx-auto ">
-          <footer className="flex flex-wrap justify-between text-white">
+          <footer className="flex flex-wrap justify-around text-white">
             <div className="flex flex-col justify-center w-full md:w-auto">
               <div className="flex items-center justify-center ">
                 <img src={logo} alt="" className="w-[80px] md:w-[100px]" />
@@ -53,6 +54,20 @@ const Footer = () => {
               <a className="link link-hover">Contact</a>
               <a className="link link-hover">Jobs</a>
               <a className="link link-hover">Press kit</a>
+            </div>
+            <div className=" md:mt-0 flex flex-col text-center md:text-left gap-1 text-xl w-full md:w-auto">
+            <header>Social Media</header>
+            <img src={socel} alt="" className="w-[100px]"/>
+            <div className="bg-black rounded-md">
+            <input
+                  type="password"
+                  placeholder="message"
+                  className="input input-bordered rounded-r-none"
+                  name="password"
+                  required
+                />
+                <button className="py-3 px-2 bg-[#0B1A34] text-white rounded-r-xl dark:bg-white dark:text-black">Send</button>
+            </div>
             </div>
           </footer>
 
