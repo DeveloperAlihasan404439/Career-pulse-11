@@ -56,12 +56,12 @@ const AddJobs = () => {
           <Lottie animationData={addjob} loop={true} />
         </div>
         <div>
-          <div className="card flex-shrink-0 w-full shadow-xl bg-base-100">
+          <div className="card flex-shrink-0 w-full shadow-xl bg-base-200 dark:bg-[#2A323C] ">
             <form onSubmit={hendelAddJob} className="card-body">
               <div className="md:flex gap-5">
                 <div className="form-control w-full">
                   <label className="label">
-                    <span className="label-text">Email</span>
+                    <span className="label-text dark:text-white">Email</span>
                   </label>
                   <input
                     type="email"
@@ -74,7 +74,7 @@ const AddJobs = () => {
                 </div>
                 <div className="form-control w-full">
                   <label className="label">
-                    <span className="label-text">Job title</span>
+                    <span className="label-text dark:text-white">Job title</span>
                   </label>
                   <input
                     type="text"
@@ -88,7 +88,7 @@ const AddJobs = () => {
               <div className="md:flex gap-5">
                 <div className="form-control w-full">
                   <label className="label">
-                    <span className="label-text">Deadline</span>
+                    <span className="label-text dark:text-white">Deadline</span>
                   </label>
                   <input
                     type="date"
@@ -101,7 +101,7 @@ const AddJobs = () => {
                 </div>
                 <div className="form-control w-full">
                   <label className="label">
-                    <span className="label-text">Description</span>
+                    <span className="label-text dark:text-white">Description</span>
                   </label>
                   <input
                     type="text"
@@ -115,7 +115,7 @@ const AddJobs = () => {
               <div className="md:flex gap-5">
                 <div className="form-control w-full">
                   <label className="label">
-                    <span className="label-text">Minimum price</span>
+                    <span className="label-text dark:text-white">Minimum price</span>
                   </label>
                   <input
                     type="text"
@@ -127,7 +127,7 @@ const AddJobs = () => {
                 </div>
                 <div className="form-control w-full">
                   <label className="label">
-                    <span className="label-text">Maximum price</span>
+                    <span className="label-text dark:text-white">Maximum price</span>
                   </label>
                   <input
                     type="text"
@@ -141,7 +141,7 @@ const AddJobs = () => {
               <div className="md:flex gap-5">
                 <div className="form-control w-full">
                   <label className="label">
-                    <span className="label-text">Category</span>
+                    <span className="label-text dark:text-white">Category</span>
                   </label>
                   
                 <select
@@ -158,7 +158,7 @@ const AddJobs = () => {
                 </div>
                 <div className="form-control w-full">
                   <label className="label">
-                    <span className="label-text">Type</span>
+                    <span className="label-text dark:text-white">Type</span>
                   </label>
                   
                 <select

@@ -45,26 +45,26 @@ const MyPostedJobsCart = ({ myjob, refetch }) => {
     });
   };
   return (
-    <div className="p-5 mb-5 border-2 rounded-xl bg-base-200">
-      <h2 className="text-lg md:text-2xl text-left font-medium text-black">
+    <div className="p-5 mb-5 border-2 rounded-xl bg-base-300 dark:bg-[#060708a9] dark:text-white">
+      <h2 className="text-lg md:text-2xl text-left font-medium ">
         {job_title}
       </h2>
-      <h1 className="text-sm md:text-lg p-1 text-left font-medium text-black">
+      <h1 className="text-sm md:text-lg p-1 text-left font-medium ">
         Deadline : {deadline}
       </h1>
-      <h1 className="text-sm md:text-lg text-left font-medium text-black">
+      <h1 className="text-sm md:text-lg text-left font-medium ">
         {" "}
         Minimum Price : {minimum_price}
       </h1>
-      <h1 className="text-sm md:text-lg text-left font-medium text-black">
+      <h1 className="text-sm md:text-lg text-left font-medium ">
         {" "}
         Maximum Price : {maximum_price}
       </h1>
-      <h1 className="text-sm md:text-lg text-left pb-2 font-medium text-black">
+      <h1 className="text-sm md:text-lg text-left pb-2 font-medium ">
         {" "}
         Email : {email}
       </h1>
-      <h1 className="text-sm md:text-md text-left font-medium text-black  mb-4">
+      <h1 className="text-sm md:text-md text-left font-medium   mb-4">
         Description : {description}
       </h1>
       <div className=" md:flex gap-5 ">

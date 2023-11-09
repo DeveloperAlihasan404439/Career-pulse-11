@@ -54,17 +54,17 @@ const Updated = () => {
         }
       });
   };
-    return (<div className="w-11/12 mx-auto p-5 grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+    return (<div className="w-11/12 mx-auto p-5 grid grid-cols-1 md:grid-cols-2 gap-5 dark:bg-[#2A323C] items-center">
     <div>
-      <img src="https://img.freepik.com/free-vector/job-offer-application-letter-response-career-opportunity-business-proposition-recruitment-agreement-man-receives-employment-contract-by-mail_335657-2696.jpg?size=626&ext=jpg&ga=GA1.1.1505135152.1696615291&semt=ais" alt="" />
+      <img src="https://img.freepik.com/free-vector/job-offer-application-letter-response-career-opportunity-business-proposition-recruitment-agreement-man-receives-employment-contract-by-mail_335657-2696.jpg?size=626&ext=jpg&ga=GA1.1.1505135152.1696615291&semt=ais" alt="" className="rounded-xl" />
     </div>
     <div>
-      <div className="card flex-shrink-0 w-full shadow-xl bg-base-100">
+      <div className="card flex-shrink-0 w-full shadow-xl bg-base-300 dark:bg-black">
         <form onSubmit={hendelUpdated} className="card-body">
           <div className="md:flex gap-5">
             <div className="form-control w-full">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text dark:text-white">Email</span>
               </label>
               <input
                 type="email"
@@ -77,7 +77,7 @@ const Updated = () => {
             </div>
             <div className="form-control w-full">
               <label className="label">
-                <span className="label-text">Job title</span>
+                <span className="label-text dark:text-white">Job title</span>
               </label>
               <input
                 type="text"
@@ -92,7 +92,7 @@ const Updated = () => {
           <div className="md:flex gap-5">
             <div className="form-control w-full">
               <label className="label">
-                <span className="label-text">Deadline</span>
+                <span className="label-text dark:text-white">Deadline</span>
               </label>
               <input
                 type="date"
@@ -105,7 +105,7 @@ const Updated = () => {
             </div>
             <div className="form-control w-full">
               <label className="label">
-                <span className="label-text">Description</span>
+                <span className="label-text dark:text-white">Description</span>
               </label>
               <input
                 type="text"
@@ -120,7 +120,7 @@ const Updated = () => {
           <div className="md:flex gap-5">
             <div className="form-control w-full">
               <label className="label">
-                <span className="label-text">Minimum price</span>
+                <span className="label-text dark:text-white">Minimum price</span>
               </label>
               <input
                 type="text"
@@ -133,7 +133,7 @@ const Updated = () => {
             </div>
             <div className="form-control w-full">
               <label className="label">
-                <span className="label-text">Maximum price</span>
+                <span className="label-text dark:text-white">Maximum price</span>
               </label>
               <input
                 type="text"
@@ -148,7 +148,7 @@ const Updated = () => {
           <div className="md:flex gap-5">
             <div className="form-control w-full">
               <label className="label">
-                <span className="label-text">Category</span>
+                <span className="label-text dark:text-white">Category</span>
               </label>
               
             <select
@@ -164,7 +164,7 @@ const Updated = () => {
             </div>
             <div className="form-control w-full">
               <label className="label">
-                <span className="label-text">Type</span>
+                <span className="label-text dark:text-white">Type</span>
               </label>
               
             <select

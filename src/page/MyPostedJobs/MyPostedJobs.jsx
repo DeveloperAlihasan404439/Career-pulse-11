@@ -18,7 +18,7 @@ const MyPostedJobs = () => {
     },
   });
   return (
-    <div className="bg-base-200">
+    <div className="bg-base-200 dark:bg-[#2A323C]">
       
       <Helmet>
         <title>Career Pulse | My Post Job</title>
@@ -32,7 +32,7 @@ const MyPostedJobs = () => {
         <Loding />
       ) : (
         <>
-          <div className="w-11/12 mx-auto my-5">
+          <div className="w-11/12 mx-auto py-10 ">
             {data?.map((myjob) => (
               <MyPostedJobsCart
                 key={myjob._id}

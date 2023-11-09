@@ -47,7 +47,7 @@ const Candidates = () => {
      }
       <div className=" mt-10 flex gap-2 justify-center items-center">
         {
-            pages?.map((page, i) => <button onClick={()=> setPagenition(i+1)} className="text-lg md:text-xl text-white bg-black py-1 md:py-3 px-3 md:px-5 rounded-[50%]" key={i}>{i + 1}</button>)
+            pages?.map((page, i) => <button onClick={()=> setPagenition(i+1)} className="text-lg md:text-xl text-white bg-black dark:bg-white dark:text-black py-1 md:py-3 px-3 md:px-5 rounded-[50%]" key={i}>{i + 1}</button>)
         }
       </div>
      </div>

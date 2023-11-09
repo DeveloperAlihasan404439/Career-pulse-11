@@ -41,19 +41,19 @@ const MyBids = () => {
       />
       <div className="w-11/12 mx-auto overflow-x-auto mb-5">
         <h1 className="text-center text-2xl md:text-4xl font-medium my-4">
-          <span className="border-b-4 p-2 rounded-xl border-orange-500">
+          <span className="border-b-4 p-2 rounded-xl border-orange-500 dark:border-white dark:text-white">
             My Bids All Jobs
           </span>
         </h1>
-        <table className="table">
+        <table className="table dark:text-white">
           <thead>
             <tr>
-              <th>No</th>
-              <th>Job Title</th>
-              <th>Email</th>
-              <th>Deadline</th>
-              <th>status</th>
-              <th>Complete</th>
+              <th className="dark:text-white">No</th>
+              <th className="dark:text-white">Job Title</th>
+              <th className="dark:text-white">Email</th>
+              <th className="dark:text-white">Deadline</th>
+              <th className="dark:text-white">status</th>
+              <th className="dark:text-white">Complete</th>
             </tr>
           </thead>
           <tbody>
